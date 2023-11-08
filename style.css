@@ -1,0 +1,701 @@
+/*Fonts*/
+@import url("fonts/IBM_Plex_Sans/stylesheet.css");
+@import url("fonts/Lato/stylesheet.css");
+
+/*Cores*/
+:root{
+    --cinza-1d: #1D1D1D;
+    --cinza-70: #707070;
+    --cinza-4d: #4D4D4D;
+    --dourado-b4: #B47D33;
+    --dourado-b1: #B17E3B;
+    --dourado-a9: #A97339;
+    --branco: #FFFFFF;
+    --preto: #000;
+}
+
+/* estabilização */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+html, body {
+    animation: fadeIn 875ms ease-in;
+}
+
+/*Global*/
+html{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--branco);
+    max-width: 1280px;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*Titulo e sublinhado*/
+#topo{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    max-width: 1280px;    
+}
+
+.titulo{
+    font-family: "IBM bold";
+    font-size: 35px;
+    text-transform: uppercase;
+    color: var(--cinza-4d);
+    margin-top: 52px;
+    margin-bottom: 10px;
+}
+
+.linha-titulo, .menu-rodape-linha{
+    max-width: 1170px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--cinza-70);
+}
+
+/*Menu topo e menu baixo*/
+.menus, .menus-barra-rodape{
+    font-family: "Lato black";
+    font-size: 18px;
+    color: var(--cinza-4d);
+    text-transform: uppercase;
+}
+
+.nav-link.menus.active, .menus-barra-rodape.active{
+    color: var(--dourado-b4);
+}
+
+.menus:hover, .menus-barra-rodape:hover{
+    color: var(--dourado-b4);
+}
+
+.navbar-nav .nav-item{
+    margin-right: 16px;
+}
+
+.nav-link.menus:focus, .menus-barra-rodape:focus{
+    color: var(--dourado-b1);
+}
+
+
+/*Submenu*/
+.submenus{
+    font-family: "IBM medium";
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--cinza-4d);
+    margin-bottom: 5px;
+    padding: 4px 24px;
+}
+
+.submenus:hover, .submenus.active{
+    color: var(--dourado-b1);
+    background-color: transparent;
+}
+
+#submenu-livros{
+    padding: 25px 5px 20px 5px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0, 0.3);
+    border-radius: 0;
+    border: none;
+}
+
+/* Carrosel */
+#carousel-desktop{
+    margin: 0px;
+    padding: 0px;
+    max-width: 1280px;
+    max-height: 730px;
+    height: 100%;
+}
+
+.carousel-item.img-fluid{
+    width: 100%;
+    height: auto;
+    max-height: 730px;
+}
+
+.cabecalho-legendas{
+    position: absolute;
+    top: 38%;
+    left: 15%;
+    width: 38%;
+    padding: 0px;
+    text-align: left;
+}
+
+.banner-novidade, .banner-novidade-vazio{
+    font-family: "IBM bold";
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--dourado-b4);
+    margin-bottom: 15px;
+    height: 20px;
+}
+
+.banner-titulo{
+    font-family: "IBM light";
+    font-size: 40px;
+    line-height: 43px;
+    color: var(--cinza-4d);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.banner-texto{
+    font-family: "IBM light";
+    font-size: 13px;
+    color: var(--cinza-4d);
+}
+
+.botao-sabermais-banner {
+    margin-top: 30px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    background-image: url('imagens/sabermais1.svg');
+    background-size: cover;
+}
+
+.botao-sabermais-banner:hover {
+    background-image: url('imagens/sabermais2.svg');
+}
+
+/*Carrossel - indicadores*/
+.cabecalho-indicadores{
+    width: 25%;
+    height: auto;
+    justify-content: left;
+    bottom: 11%;
+}
+
+.carousel-indicators [data-bs-target].custom-indicator{
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-right: 16px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url('imagens/bolabanner1.svg');
+}
+
+.carousel-indicators [data-bs-target].custom-indicator.active{
+    background-image: url('imagens/bolabanner2.svg');
+}
+
+.carousel-indicators [data-bs-target].custom-indicator:hover{
+    background-image: url('imagens/bolabanner2.svg');
+}
+
+/*escritor*/
+#caixa-topo{
+    position: relative;
+    margin-top: -45px;
+    background-color: var(--branco);
+    box-shadow: -2px 8px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+#bemvindo-imagem{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    max-height: 400px;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+#bemvindo-caixa-imagem{
+    padding: 60px 35px 60px 60px;
+}
+
+#bemvindo-titulo{
+    margin-top: 80px;
+}
+
+.t1{
+    font-family: "IBM bold";
+    font-size: 25px;
+    text-transform: uppercase;
+    color: var(--cinza-4d);
+}
+
+.p{
+    font-family: "IBM light";
+    font-size: 14px;
+    color: var(--cinza-4d);
+    text-align: justify;
+    margin-top: 30px;
+}
+
+#caixa-topo{
+    padding-right: 48px;
+}
+
+#bemvindo-conteudo{
+    padding-right: 48px;
+}
+
+#ultimos-livros{
+    margin-top: 85px;
+    padding-right: 100px;
+}
+
+/*Cards*/
+
+.livros-box{
+    max-width: 1280px;
+
+}
+
+#caixa-destaques-livros{
+    padding-top: 70px;
+}
+
+#caixa-destaques-livros button{
+    float: right;
+}
+
+.livros-box-cards{
+    max-width: 1100px;
+}
+
+.destaques-livro{
+    width: 325px;
+    box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.2);
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.destaques-capa-livro{
+    width: 325px;
+    height: 430px;
+}
+
+.destaques-livro-conteudo{
+    padding: 0px 25px;
+}
+
+.destaques-titulo{
+    font-family: "IBM medium";
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 25px;
+    color: var(--cinza-4d);
+    margin-top: 50px;
+}
+
+.destaques-tags{
+    font-family: "IBM medium";
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--dourado-b4);
+    margin-top: 10px;
+}
+
+.destaques-texto{
+    margin-top: 10px;
+    height: 160px;
+    padding-right: 0px;
+}
+
+
+/*Barra de navegação do Footer*/
+#menu-rodape{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.menu-rodape-itens{
+    margin: 27px 0px;
+}
+
+.menus-barra-rodape{
+    font-size: 16px;
+    margin: 0px 15px;
+}
+
+/* Footer */
+.contactos-titulo{
+    font-family: "IBM medium";
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--dourado-b4);
+}
+
+.contactos-conteudo{
+    font-family: "IBM light";
+    font-size: 13px;
+    color: var(--cinza-4d);
+    margin-top: 6px;
+}
+
+.contactos{
+    padding-left: 80px;
+}
+
+.contactos-info{
+    margin-top: 20px;
+}
+
+.livro-rec{
+    margin-top: 58px;
+}
+
+.ralc{
+    margin-left: 43px;
+}
+
+.siga-me{
+    padding-right: 48px;
+}
+
+.icone{
+    width: 37px;
+    height: 37px;
+}
+
+.botao-insta{
+    background-image: url('imagens/instagram1.svg');
+    background-size: cover;
+}
+
+.botao-insta:hover {
+    background-image: url('imagens/instagram2.svg');
+}
+
+.botao-fb{
+    background-image: url('imagens/facebook1.svg');
+    background-size: cover;
+}
+
+.botao-fb:hover {
+    background-image: url('imagens/facebook2.svg');
+}
+
+.botao-link{
+    background-image: url('imagens/linkedin1.svg');
+    background-size: cover;
+}
+
+.botao-link:hover {
+    background-image: url('imagens/linkedin2.svg');
+}
+
+.redes{
+    padding-right: 125px;
+    padding-left: 75px; 
+    margin-top: 30px;
+}
+
+#copyright {
+    margin-top: 88px;
+    margin-bottom: 70px;
+}
+
+
+/*caixa imprensa titulo/autor*/
+
+#imprensa-titulo, #autor-titulo{
+    color: var(--dourado-b4);
+    font-family: "Lato black";
+    font-size: 18px;
+}
+
+#imprensa-subtitulo, #autor-subtitulo{
+    color: var(--cinza-4d);
+    text-transform: uppercase;
+    font-family: "IBM medium";
+    font-size: 23px;
+}
+
+#imprensa-titulo, #autor-titulo{
+    margin: 48px 0px 0px 48px;
+    padding: 0px 15px;
+}
+
+#imprensa-subtitulo, #autor-subtitulo{
+    margin: 6px 0px 16px 48px;
+    padding: 0px 15px;
+}
+
+/* noticias imprensa */
+
+#ultimas-noticias, .foto-autor{
+    margin-top: 60px;
+    padding: 0px 15px;
+}
+
+.noticias-box{
+    padding: 0px;
+}
+
+.linha-imprensa{
+    margin: 12px 0px 12px;
+    max-width: 891px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--dourado-a9);
+}
+
+.data-publicacao{
+    max-width: 891px;
+    font-family: "IBM medium"; /*no print dá ideia de medium*/
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--cinza-4d);
+    margin-bottom: 40px;
+}
+
+.linha-noticias{
+    margin: 80px 0px;
+    width: 100%;
+    height: 3px; 
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.resumo-velho, .resumo-autor{
+    max-width: 900px;
+    padding: 0px;
+}
+
+/* paginação */
+
+.page-item {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+#nav-paginacao{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.paginacao{
+    display: flex;
+    justify-content: center;
+}
+
+.page-link.numero{
+    margin-right: 17px;
+    color: var(--cinza-4d);
+    font-family: "IBM medium";
+    font-size: 23px;
+}
+
+.page-link.numero.active, .page-link.numero:hover{
+    color: var(--dourado-b1);
+}
+
+.esquerda-seta, .direita-seta {
+    width: 17px;
+    height: 30px;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.esquerda-seta{
+    margin-right: 60px;
+    background-image: url('imagens/setaesquerda1.svg');
+}
+
+.esquerda-seta:hover {
+    background-image: url('imagens/setaesquerda2.svg');
+}
+
+.direita-seta {
+    margin-left: 43px;
+    background-image: url('imagens/setadireita1.svg');
+    
+}
+
+.direita-seta:hover {
+    background-image: url('imagens/setadireita2.svg');
+}
+
+/* Botão voltar atrás */
+.botao-voltar-atras{
+    margin-top: 75px;
+    width: 132px;
+    height: 30px;
+    border: none;
+    background-image: url('imagens/voltar1.svg');
+    background-size: cover;
+} 
+
+.botao-voltar-atras:hover {
+    background-image: url('imagens/voltar2.svg');
+}  
+
+/* Página livros - Capa, texto, botão*/
+
+.imagem-capa, .livros-info{
+    margin-top: 65px;
+}
+
+.livros-info{
+    margin-left: 80px;
+}
+
+.livros-box button{
+    margin-top: 95px ;
+}
+
+/* Página contactos */
+
+.contactos-main{
+    margin-top: 80px;
+}
+
+.linha-contactos{
+    margin: 40px 0px;
+    max-width: 60px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--cinza-70);
+}
+
+
+/* Mobile */
+
+#carousel-mobile{
+    padding: 0px;
+}
+
+#botao-hamburguer{
+    padding: 0px;
+    height: 25px;
+    width: 35px;
+}
+
+
+
+@media only screen and (max-width: 360px) {
+    .titulo{
+        font-size: 24px;       
+    }
+
+    .banner-titulo{
+        font-size: 32px;
+    }
+
+    .linha-titulo{
+        width: 80%;
+    }
+
+    #caixa-topo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-right: 0px;
+        margin-top: 73px;
+        padding-right: 0px;
+    }
+
+    #bemvindo-caixa-imagem, #bemvindo-conteudo{ 
+        padding: 0px; 
+    }
+
+    #ultimos-livros{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding: 0px 18px;
+    }
+
+    .destaques-titulo{
+        margin-top: 40px;
+    }
+
+    .destaques-livro{
+        margin-bottom: 80px;
+    }
+
+    .linha-titulo-baixo{
+        width: 90%;
+    }
+
+    #caixa-destaques-livros{
+        margin: 0px;
+    }
+    
+    .destaques-titulo{
+        font-size: 22px;
+    }
+
+    .contactos{
+        padding: 0px;
+    }
+
+    .siga-me{
+        padding: 0px;
+        margin-top: 80px;
+    }
+
+    .redes{
+        width: 230px;
+        margin: auto;
+        margin-top: 30px;
+        padding: 0px;
+    }
+
+    #copyright{
+        margin-top: 43px;
+        margin-bottom: 60px;
+    }
+
+    .contactos{
+        text-align: center;
+    }
+
+    #navbar-topo{
+        background-color: white;
+        margin-top: -10px;
+        padding: 20px 35px;
+    }
+
+    .dropdown-menu{
+        margin: 20px 0px;
+    }
+
+}
+
+.cabecalho-legendas-mobile {
+    position: absolute;
+    top: 45%;
+    width: 85%;
+    padding: 0px;
+    text-align: left;
+    left: 8.5%;
+}
+
+.mobile-indicadores{
+    width: auto;
+    height: auto;
+    justify-content: left;
+    left: -7.5%;
+}
+
+.linha-mobile{
+    margin-bottom: 40px;
+}
